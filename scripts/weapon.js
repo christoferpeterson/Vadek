@@ -28,7 +28,7 @@ define('weapon', ['projectile'], function(projectile) {
 	}
 
 	weapon.basic.prototype = new weapon({
-		fireRate: 1.5
+		fireRate: 5
 	});
 
 	weapon.basic.prototype.generateProjectiles = function(ship) {

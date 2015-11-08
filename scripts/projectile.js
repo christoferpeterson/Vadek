@@ -14,10 +14,10 @@ define('projectile', ['gameEntity'], function(gameEntity) {
 	projectile.prototype = new gameEntity();
 
 	projectile.prototype.update = function(engine) {
-		var pixelChange = -this.speed * engine.secondsPerFrame;
+		var pixelChange = this.speed * engine.secondsPerFrame;
 
 		var dX = pixelChange * Math.cos(this.direction);
-		var dY = pixelChange * Math.sin(this.direction);
+		var dY = pixelChange * -Math.sin(this.direction);
 
 		this.x += dX;
 		this.y += dY;

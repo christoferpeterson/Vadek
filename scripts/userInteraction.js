@@ -25,7 +25,7 @@ define('userInteraction', [], function() {
 	actions.prototype.keyUp = function(e) {
 		var actionsTriggered = this.findKeys(e.keyCode);
 
-		for (var i = 0; i < actionsTriggered.length; i++) {
+		for (var i = 0; i < actionsTriggered.length; i++) { 
 			actionsTriggered[i].active = false;
 		};
 	}

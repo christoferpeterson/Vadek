@@ -45,6 +45,21 @@ require(['gameEngine', 'level', 'enemy', 'ship'], function(Game, Level, Enemy, S
 			);
 		}
 
+		for(i = 5; i > 0; i--) {
+			enemies.push(
+				new Enemy({
+					width: 20,
+					height: 20,
+					startX: 50 * i + 150,
+					startY: -200,
+					z: 50,
+					color: '#f00',
+					speed: 150,
+					life: 1
+				})
+			);
+		}
+
 		return enemies;
 	}
 
